@@ -5,7 +5,7 @@ import java.util.Date;
 public class Feria {
 
     private String nombre; //El nombre de la Feria varía depende del mes y la ubicación en donde se encuentre 
-    private int numeroDeJuegos; //El total de juegos es 100
+    private int numeroDeJuegos;
     private Date fechaDeFundacion;
     private String comida;
     private Boolean abierta; //Si el 70% de los juegos están activos, la Feria está abierta
@@ -90,7 +90,30 @@ public class Feria {
     
     
     public static void main(String[] args) {
+        Feria feriaUno = new Feria(
+                "Hawk Magic",
+                100,
+                new Date(),
+                "perro + gaseosa + papas, hamburguesa + gaseosa, dos perros + dos gaseosas, nachos, dulces, entre otros",
+                true);
+        Feria feriaDos = new Feria(
+                "Fantastic city",
+                50,
+                new Date(),
+                "sandwich + jugo hit, empanada + gaseosa + salsas, sancocho + gaseosa + ensalada, entre otros",
+                false); 
         
+        System.out.println(feriaUno.getNombre());
+        System.out.println(feriaUno.getNumeroDeJuegos());
+        System.out.println(feriaUno.getAbierta());
+        
+        feriaUno.activarJuegos();
+        
+        System.out.println(feriaUno.getNombre());
+        System.out.println(feriaUno.getNumeroDeJuegos());
+        System.out.println(feriaUno.getAbierta());
+                 
+        feriaUno.activarJuegos();
     }
     
 }
