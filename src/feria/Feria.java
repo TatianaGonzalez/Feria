@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class Feria {
 
-    private String nombre; //El nombre de la Feria varía depende del mes y la ubicación en donde se encuentre 
-    private int numeroDeJuegos;
-    private Date fechaDeFundacion;
-    private String comida;
-    private Boolean abierta; //Si el 70% de los juegos están activos, la Feria está abierta
+    private String nombre; //Este es el nombre de la feria 
+    private int numeroDeJuegos; //Este es el numero de juegos que tiene la feria
+    private Date fechaDeFundacion; //Esta es la fecha en la que se fundó la feria
+    private String comida; //Comida (combos) que hay en la feria
+    private Boolean abierta; //Denota si la feria se puede abrir o no
 
     public Feria(
             String nombre, 
