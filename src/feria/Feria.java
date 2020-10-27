@@ -9,7 +9,15 @@ public class Feria {
     private Date fechaDeFundacion; //Esta es la fecha en la que se fundó la feria
     private String comida; //Comida (combos) que hay en la feria
     private Boolean abierta; //Denota si la feria se puede abrir o no
-
+    private String nombreAtracciones;
+    private Date fechaDeCreacion;
+    
+    //Composición
+    private Atracciones atracciones;
+    
+    //Agregación
+    private Espectadores clientes;
+    
     public Feria(
             String nombre, 
             int numeroDeJuegos, 
@@ -21,6 +29,13 @@ public class Feria {
         this.fechaDeFundacion = fechaDeFundacion;
         this.comida = comida;
         this.abierta = abierta;
+        
+        this.atracciones = new Atracciones(nombreAtracciones, true, fechaDeCreacion);
+        this.clientes = Espectadores(nombre, edad);
+    }
+
+    private Feria(String fantastic_city, int i, Date date, String sandwich__jugo_hit_empanada__gaseosa__sal, boolean b, String montana_rusa) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     /**
@@ -95,13 +110,24 @@ public class Feria {
                 100,
                 new Date(),
                 "perro + gaseosa + papas, hamburguesa + gaseosa, dos perros + dos gaseosas, nachos, dulces, entre otros",
-                true);
+                true,
+                "360");
+        
+        Clientes clientesUno = new espectadores(
+                "Juan",
+                17);
+                
         Feria feriaDos = new Feria(
                 "Fantastic city",
                 50,
                 new Date(),
                 "sandwich + jugo hit, empanada + gaseosa + salsas, sancocho + gaseosa + ensalada, entre otros",
-                false); 
+                false,
+                "montana rusa");
+        
+        Clientes clientesUno = new espectadores(
+                "Maria Jose",
+                20);
         
         System.out.println(feriaUno.getNombre());
         System.out.println(feriaUno.getNumeroDeJuegos());
